@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Autohand;
 
 public class StringController : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class StringController : MonoBehaviour
     private Transform midPointGrabObject, midPointVisualObject, midPointParent;
 
     [SerializeField]
-    private float bowStringStretchLimit = 0.3f;
+    private float bowStringStretchLimit = 1.0f;
 
     private Transform interactor;
 
@@ -24,9 +25,9 @@ public class StringController : MonoBehaviour
 
     }
 
-    public void PrepareBowString(Transform interactorTransform)
+    public void PrepareBowString(Hand interactorTransform)
     {
-        interactor = interactorTransform;
+        interactor = interactorTransform.transform;
     }
 
     private void Update()
@@ -34,8 +35,7 @@ public class StringController : MonoBehaviour
         if (interactor != null)
         {
             //convert bow string mid point position to the local space of the MidPoint
-            Vector3 midPointLocalSpace =
-                midPointParent.InverseTransformPoint(midPointGrabObject.position); // localPosition
+            Vector3 midPointLocalSpace = midPointParent.InverseTransformPoint(midPointGrabObject.position); // localPosition
 
             //get the offset
             float midPointLocalZAbs = Mathf.Abs(midPointLocalSpace.z);
@@ -48,7 +48,8 @@ public class StringController : MonoBehaviour
 
             bowStringRenderer.CreateString(midPointVisualObject.position);
         }
-    }
+}
+
 
     private void HandlePullingString(float midPointLocalZAbs, Vector3 midPointLocalSpace)
     {
@@ -64,8 +65,8 @@ public class StringController : MonoBehaviour
         //We specify max pulling limit for the string. We don't allow the string to go any farther than "bowStringStretchLimit"
         if (midPointLocalSpace.z < 0 && midPointLocalZAbs >= bowStringStretchLimit)
         {
-            //Vector3 direction = midPointParent.TransformDirection(new Vector3(0, 0, midPointLocalSpace.z));
-            midPointVisualObject.localPosition = new Vector3(0, 0, -bowStringStretchLimit);
+            Vector3 direction = midPointParent.TransformDirection(new Vector3(0, 0, midPointLocalSpace.z));
+            midPointVisualObject.localPosition = new Vector3(0, 0, bowStringStretchLimit);
         }
     }
 
@@ -74,6 +75,21 @@ public class StringController : MonoBehaviour
         if (midPointLocalSpace.z >= 0)
         {
             midPointVisualObject.localPosition = Vector3.zero;
+        }
+    }
+    public void MakeKinematic(GameObject obj)
+    {
+        if (obj.GetComponent<Rigidbody>() != null)
+        {
+            obj.GetComponent<Rigidbody>().isKinematic = true;
+        }
+    }
+
+    public void MakeNonKinematic(GameObject obj)
+    {
+        if (obj.GetComponent<Rigidbody>() != null)
+        {
+            obj.GetComponent<Rigidbody>().isKinematic = false;
         }
     }
 }

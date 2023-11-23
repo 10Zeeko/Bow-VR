@@ -183,9 +183,21 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1030774009}
+  - {fileID: 1651444015}
   m_Father: {fileID: 956646667}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &330860194 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1262313376109179214, guid: a5226a72c9553294abfe172a458b5805, type: 3}
+  m_PrefabInstance: {fileID: 1340100194}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9413d460e98076241a1f46c91201217d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &473050436
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -561,10 +573,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ignoreMe: 0
-  poseEnabled: 0
+  poseEnabled: 1
   poseName: 
   poseIndex: 0
-  singleHanded: 0
+  singleHanded: 1
   showAdvanced: 1
   positionWeight: 1
   rotationWeight: 1
@@ -573,7 +585,7 @@ MonoBehaviour:
   poseScriptable: {fileID: 0}
   editorHand: {fileID: 0}
   rightPose:
-    handOffset: {x: 0.16880001, y: 0.043300018, z: 0.0635}
+    handOffset: {x: 0.16880007, y: 0.043300018, z: 0.0635}
     rotationOffset: {x: 0, y: 0, z: 0}
     localQuaternionOffset: {x: 0.022188574, y: -0.022188574, z: 0.7067586, w: 0.7067586}
     posePositions:
@@ -602,25 +614,25 @@ MonoBehaviour:
     - {x: 0.012234439, y: -0.11092072, z: -0.035879955, w: 0.99310607}
     - {x: 0.2596602, y: -0.43860388, z: 0.06165659, w: 0.85813856}
     - {x: -0.0000061402106, y: -0.0000049649398, z: 0.0000024675394, w: 1}
-    - {x: 0.075333074, y: -0.11157522, z: 0.07694081, w: 0.98790485}
+    - {x: 0.07533308, y: -0.11157523, z: 0.07694082, w: 0.9879049}
     - {x: 0.011304368, y: 0.010153701, z: -0.01292826, w: 0.99980104}
     - {x: -0.04960119, y: -0.5240884, z: 0.08229076, w: 0.8462266}
     - {x: -0.0000034403058, y: -0.000003005378, z: -0.000007307157, w: 1}
     - {x: 0.0027419114, y: -0.15194231, z: -0.03153234, w: 0.9878825}
-    - {x: 0.013358579, y: -0.34712946, z: 0.005804386, w: 0.9377041}
+    - {x: 0.01335858, y: -0.34712946, z: 0.0058043865, w: 0.9377041}
     - {x: 0.007254845, y: -0.32216913, z: 0.0013469021, w: 0.9466534}
     - {x: -0.0000072037797, y: -0.0000022402965, z: -0.0000032116654, w: 1}
     - {x: -0.107571065, y: -0.17680852, z: -0.16162126, w: 0.96490717}
     - {x: 0.05641271, y: -0.268348, z: -0.033753034, w: 0.9610764}
     - {x: 0.10370032, y: -0.45246848, z: -0.11578932, w: 0.87812954}
     - {x: -0.0000075772396, y: 0.0000004423782, z: -0.000001301989, w: 1}
-    - {x: -0.23131858, y: -0.085017145, z: -0.21785125, w: 0.94435406}
+    - {x: -0.2313186, y: -0.08501715, z: -0.21785127, w: 0.9443541}
     - {x: 0.07649244, y: -0.22383365, z: -0.038696, w: 0.9708502}
     - {x: 0.1591191, y: -0.5639597, z: -0.20397568, w: 0.78423506}
     - {x: -0.000008029863, y: 0.0000010747461, z: -0.0000007860363, w: 1}
   rightPoseSet: 1
   leftPose:
-    handOffset: {x: -0.16880001, y: 0.043300048, z: 0.0635}
+    handOffset: {x: -0.1688001, y: 0.043300048, z: 0.0635}
     rotationOffset: {x: 0, y: 0, z: 0}
     localQuaternionOffset: {x: 0.022188574, y: 0.022188574, z: -0.7067586, w: 0.7067586}
     posePositions:
@@ -649,19 +661,19 @@ MonoBehaviour:
     - {x: 0.012234439, y: -0.11092072, z: -0.035879955, w: 0.99310607}
     - {x: 0.2596602, y: -0.43860388, z: 0.06165659, w: 0.85813856}
     - {x: -0.0000061402106, y: -0.0000049649398, z: 0.0000024675394, w: 1}
-    - {x: 0.075333074, y: -0.11157522, z: 0.07694081, w: 0.98790485}
+    - {x: 0.07533308, y: -0.11157523, z: 0.07694082, w: 0.9879049}
     - {x: 0.011304368, y: 0.010153701, z: -0.01292826, w: 0.99980104}
     - {x: -0.04960119, y: -0.5240884, z: 0.08229076, w: 0.8462266}
     - {x: -0.0000034403058, y: -0.000003005378, z: -0.000007307157, w: 1}
     - {x: 0.0027419114, y: -0.15194231, z: -0.03153234, w: 0.9878825}
-    - {x: 0.013358579, y: -0.34712946, z: 0.005804386, w: 0.9377041}
+    - {x: 0.01335858, y: -0.34712946, z: 0.0058043865, w: 0.9377041}
     - {x: 0.007254845, y: -0.32216913, z: 0.0013469021, w: 0.9466534}
     - {x: -0.0000072037797, y: -0.0000022402965, z: -0.0000032116654, w: 1}
     - {x: -0.107571065, y: -0.17680852, z: -0.16162126, w: 0.96490717}
     - {x: 0.05641271, y: -0.268348, z: -0.033753034, w: 0.9610764}
     - {x: 0.10370032, y: -0.45246848, z: -0.11578932, w: 0.87812954}
     - {x: -0.0000075772396, y: 0.0000004423782, z: -0.000001301989, w: 1}
-    - {x: -0.23131858, y: -0.085017145, z: -0.21785125, w: 0.94435406}
+    - {x: -0.2313186, y: -0.08501715, z: -0.21785127, w: 0.9443541}
     - {x: 0.07649244, y: -0.22383365, z: -0.038696, w: 0.9708502}
     - {x: 0.1591191, y: -0.5639597, z: -0.20397568, w: 0.78423506}
     - {x: -0.000008029863, y: 0.0000010747461, z: -0.0000007860363, w: 1}
@@ -670,7 +682,7 @@ MonoBehaviour:
   up: {x: 0, y: 1, z: 0}
   useInvertPose: 0
   minAngle: 0
-  maxAngle: 360
+  maxAngle: 0
   maxRange: 0
   minRange: 0
   testAngle: 0
@@ -689,9 +701,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bowStringRenderer: {fileID: 1429730193}
   midPointGrabObject: {fileID: 1030774009}
-  midPointVisualObject: {fileID: 1030774009}
+  midPointVisualObject: {fileID: 1651444015}
   midPointParent: {fileID: 154691970}
-  bowStringStretchLimit: 0.3
+  bowStringStretchLimit: 1
 --- !u!65 &956646673
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -818,7 +830,6 @@ GameObject:
   - component: {fileID: 1030774012}
   - component: {fileID: 1030774010}
   - component: {fileID: 1030774011}
-  - component: {fileID: 1030774014}
   - component: {fileID: 1030774015}
   m_Layer: 0
   m_Name: MidPointGrabbable
@@ -889,8 +900,20 @@ MonoBehaviour:
         m_MethodName: PrepareBowString
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1030774009}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_ObjectArgument: {fileID: 330860194}
+          m_ObjectArgumentAssemblyTypeName: Autohand.Hand, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 956646672}
+        m_TargetAssemblyTypeName: StringController, Assembly-CSharp
+        m_MethodName: MakeNonKinematic
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1030774008}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -906,6 +929,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 956646672}
+        m_TargetAssemblyTypeName: StringController, Assembly-CSharp
+        m_MethodName: MakeKinematic
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1030774008}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -999,19 +1034,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1030774008}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1030774014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1030774008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88c6f05faa8c57b4c83638f7f36c7c8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  grabParent: {fileID: 956646668}
 --- !u!54 &1030774015
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1528,6 +1550,111 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1651444014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1651444015}
+  - component: {fileID: 1651444018}
+  - component: {fileID: 1651444017}
+  - component: {fileID: 1651444016}
+  m_Layer: 0
+  m_Name: MidPointVisual
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1651444015
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651444014}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 154691970}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1651444016
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651444014}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1651444017
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651444014}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: c969267be26862c4eabf4a176d7c88ef, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1651444018
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651444014}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1688884238
 PrefabInstance:
   m_ObjectHideFlags: 0

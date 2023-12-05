@@ -22,6 +22,9 @@ public class StringController : MonoBehaviour
     public UnityEvent OnBowPulled;
     public UnityEvent<float> OnBowReleased;
 
+    [SerializeField] private GameObject bow;
+    [SerializeField] private GameObject midPointGrabbable;
+
     public void ResetBowString()
     {
         OnBowReleased?.Invoke(strength);
@@ -58,7 +61,9 @@ public class StringController : MonoBehaviour
 
             bowStringRenderer.CreateString(midPointVisualObject.position);
         }
-}
+
+        midPointGrabbable.transform.rotation = bow.transform.rotation;
+    }
 
 
     private void HandlePullingString(float midPointLocalZAbs, Vector3 midPointLocalSpace)

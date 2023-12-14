@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Autohand;
+using TMPro;
 using UnityEngine.Events;
 
 public class StringController : MonoBehaviour
@@ -25,6 +27,16 @@ public class StringController : MonoBehaviour
     [SerializeField] private GameObject bow;
     [SerializeField] private GameObject midPointGrabbable;
 
+    private int totalPoints = 0;
+    [SerializeField] private TextMeshProUGUI pointsText;
+    [SerializeField] private TextMeshProUGUI strengthText;
+    private bool updateStrengthText = false;
+
+    private void Start()
+    {
+        strengthText.maxVisibleCharacters = 4;
+    }
+
     public void ResetBowString()
     {
         OnBowReleased?.Invoke(strength);
@@ -34,7 +46,8 @@ public class StringController : MonoBehaviour
         midPointGrabObject.localPosition = Vector3.zero;
         midPointVisualObject.localPosition = Vector3.zero;
         bowStringRenderer.CreateString(null);
-
+        strengthText.SetText("");
+        updateStrengthText = false;
     }
 
     public void PrepareBowString(Hand interactorTransform)
@@ -61,10 +74,16 @@ public class StringController : MonoBehaviour
 
             bowStringRenderer.CreateString(midPointVisualObject.position);
         }
-
         midPointGrabbable.transform.rotation = bow.transform.rotation;
     }
 
+    private void FixedUpdate()
+    {
+        if (updateStrengthText)
+        {
+            strengthText.text = strength.ToString();
+        }
+    }
 
     private void HandlePullingString(float midPointLocalZAbs, Vector3 midPointLocalSpace)
     {
@@ -114,5 +133,12 @@ public class StringController : MonoBehaviour
         {
             obj.GetComponent<Rigidbody>().isKinematic = false;
         }
+        updateStrengthText = true;
+    }
+
+    public void UpdatePoints(int points)
+    {
+        totalPoints += points;
+        pointsText.text = totalPoints.ToString();
     }
 }

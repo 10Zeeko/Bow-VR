@@ -72,6 +72,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: target
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ab1bd23f3bec2ec48820ee43ba016c6f, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -217,8 +221,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 847cc9bda210ed04aabde66bd36b3766, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bow: {fileID: 0}
   audioSource: {fileID: 0}
   targetType: 0
   targetPosition: {x: 0, y: 0, z: 0}
   totalTime: 0
-  speed: 10
+  speed: 2

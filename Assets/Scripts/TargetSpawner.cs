@@ -21,6 +21,7 @@ public class TargetSpawner : MonoBehaviour
         int selectedPos = UnityEngine.Random.Range(0, posiblePositions.Length);
         newTarget.transform.position = posiblePositions[selectedPos].position;
         newTarget.transform.rotation = posiblePositions[selectedPos].rotation;
+        newTarget.GetComponent<Target>().targetPosition = posiblePositions[selectedPos].position;
         Invoke(nameof(SpawnTarget), timer);
     }
 }

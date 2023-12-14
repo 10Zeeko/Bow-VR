@@ -10,6 +10,7 @@ public class StickingArrowToSurface : MonoBehaviour
 
     [SerializeField] private SphereCollider coll;
     [SerializeField] private GameObject stickyArrow;
+    public StringController bowParent;
 
     private void OnCollisionEnter(Collision other)
     {
@@ -19,11 +20,14 @@ public class StickingArrowToSurface : MonoBehaviour
         arrow.transform.position = transform.position;
         arrow.transform.forward = transform.forward;
 
-        if (coll.GetComponent<Collider>().attachedRigidbody != null)
+        if (coll != null && coll.GetComponent<Collider>() != null && coll.GetComponent<Collider>().attachedRigidbody != null)
         {
-            arrow.transform.parent = other.collider.attachedRigidbody.transform;
+            if (arrow != null && other != null && other.collider != null)
+            {
+                arrow.transform.parent = other?.collider.attachedRigidbody.transform;
+            }
         }
-        other.collider.GetComponent<Target.IHittable>()?.GetHit();
+        //other.collider.GetComponent<Target.IHittable>()?.GetHit();
         
         Destroy(gameObject);
     }

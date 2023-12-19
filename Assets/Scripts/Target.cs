@@ -32,7 +32,7 @@ public class Target : MonoBehaviour
         _startTransform = GetComponent<Transform>();
         if (targetType == TargetType.Select)
         {
-            targetType = (TargetType)UnityEngine.Random.Range(1, Convert.ToInt16(Enum.GetValues(typeof(TargetType)).Cast<TargetType>().Max()));
+            targetType = (TargetType)UnityEngine.Random.Range(0, Convert.ToInt16(Enum.GetValues(typeof(TargetType)).Cast<TargetType>().Max() + 1));
         }
     }
 
@@ -46,7 +46,7 @@ public class Target : MonoBehaviour
             case TargetType.Circles:
                 // Move in circles using cos and sin
                 float newX = Mathf.Cos(Time.time * speed) * radius;
-                float newY = Mathf.Sin(Time.time * speed) * radius;
+                float newY = Mathf.Sin(Time.time * speed) * radius + 0.5f;
                 transform.position = new Vector3(newX, newY, newTargetPos.z);
                 break;
             case TargetType.MoveToSides:
@@ -56,7 +56,7 @@ public class Target : MonoBehaviour
                 break;
             case TargetType.MoveUpAndDown:
                 // Move vertically using sin
-                newY = Mathf.Sin(Time.time * speed) * radius;
+                newY = Mathf.Sin(Time.time * speed) * radius + 0.5f;
                 transform.position = new Vector3(newTargetPos.x, newY, newTargetPos.z);
                 break;
             default:
